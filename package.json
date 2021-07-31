@@ -1,0 +1,36 @@
+{
+  "name": "secrets",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "loglevel": "^1.7.1",
+    "mongoose": "^5.13.3",
+    "morgan": "~1.9.1"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "Ronaldo",
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "express",
+    "bcrypt",
+    "salt",
+    "hash",
+    "mongodb"
+  ],
+  "description": "App de autenticação usando bcrypt com salt para aumentar a dificuldade de decifrar o hash original. Desenvolvido com Nodejs/Expressjs e MongoDB."
+}
