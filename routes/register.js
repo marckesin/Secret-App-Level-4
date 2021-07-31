@@ -22,7 +22,7 @@ router.post('/', (req, res, next) => {
           if (!err) {
             user.save((err) => {
               if (!err) {
-                res.render('secrets');
+                res.render('secrets', { secret: hash });
               } else {
                 next(err);
               }
