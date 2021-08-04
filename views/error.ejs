@@ -1,7 +1,8 @@
-<%- include('partials/header') %>
+<%- include('./partials/header') %>
 
-    <h1><%= message %></h1>
-    <h2><%= error.status %></h2>
-    <!-- <pre><%= error.stack %></pre> -->
+    <div class="d-flex mt-auto flex-column text-center">
+        <h1 class="display-3 text-dark"><%= message %></h1>
+        <h2 class="text-dark"><%= error.status %></h2>
+    </div>
 
-<%- include('partials/footer') %>
+<%- include('./partials/footer') %> 

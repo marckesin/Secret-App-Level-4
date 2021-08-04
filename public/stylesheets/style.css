@@ -19,6 +19,10 @@ span{
   font-size: 1.9rem;
 }
 
+.fa-icon{
+  color: #000;
+}
+
 .hash{
   display: flex;
   transition: transform .2s, 
@@ -32,10 +36,44 @@ span{
   cursor: pointer;
   margin: 0 2rem;
   padding: 0 1rem;
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 
 .hash:hover span{
   opacity: 1;
   transform: translateY(-30px);
+}
+
+.registrar{
+  margin: 7rem 20rem 0;
+  padding: 1rem;
+}
+
+@media(max-width: 576px) {
+  span{
+    opacity: 0!important;
+  }
+
+  .hash{
+    justify-content: center;
+    margin-bottom: .5rem;
+  }
+
+  .hash p{
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .hash-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+
+  .registrar{
+    margin: 4rem 4rem 0;
+    padding: 1rem;
+  }
+
 }
