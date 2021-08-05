@@ -6,7 +6,7 @@ const User = require('../models/user.model');
 const saltRounds = 10;
 
 router.get('/', (req, res) => {
-  res.render('register');
+  res.render('register', { info: "" });
 });
 
 router.post('/', (req, res, next) => {
@@ -28,12 +28,11 @@ router.post('/', (req, res, next) => {
               }
             });
           } else {
-            // console.log(err.errors.email.properties.message);
             next(err);
           }
         });
       } else {
-        res.redirect('/register');
+        res.render('register', { info: 'Usuário já existe!' });
       }
     });
   });

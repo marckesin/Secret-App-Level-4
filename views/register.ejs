@@ -1,24 +1,43 @@
 <%- include('partials/header') %>
 
-    <div class="registrar border rounded-3">
+    <div class="registrar shadow border rounded-3">
         <h2 class="text-center mb-5">Registrar</h2>
         <div class="row">
             <div class="col-lg-6 col-sm-10 mx-auto">
                 <form action="/register" method="POST">
-                    <div class="mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" minlength="4" required>
-                    </div>
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-dark">Registrar</button>
+                    <section class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="d-flex">
+                                <span class="material-icons text-danger">
+                                    error_outline
+                                </span>
+                                <% if (info) { %>
+                                    <p class="text-danger ms-1 m-0">
+                                        <%= info %>
+                                            <% } %>
+                                    </p>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" name="username" id="email" autocomplete="username"
+                            required autofocus>
+                    </section>
+                    <section class="mb-3">
+                        <label for="inputPass" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPass" name="password"
+                            autocomplete="new-password" minlength="4" required>
+                    </section>
+                    <section class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="showPass">
+                        <label class="form-check-label" for="showPass">mostrar senha</label>
+                    </section>
+                    <div class="mb-3 d-flex">
+                        <a class="btn btn-lg btn-outline-danger" href="/" role="button">Voltar</a>
+                        <button type="submit" class="btn btn-lg btn-dark mx-2">Registrar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>

@@ -1,24 +1,31 @@
 <%- include('partials/header') %>
 
-    <div class="registrar border rounded-3">
+    <div class="registrar shadow border rounded-3">
         <h2 class="text-center mb-5">Login</h2>
         <div class="row">
             <div class="col-lg-6 col-sm-10 mx-auto">
                 <form action="/login" method="POST">
+                    <section class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="username" id="email" autocomplete="username"
+                            required autofocus>
+                    </section>
+                    <section class="mb-3">
+                        <label for="inputPass" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPass" name="password" minlength="4"
+                            autocomplete="current-password" required>
+                    </section>
+                    <section class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="showPass">
+                        <label class="form-check-label" for="showPass">mostrar senha</label>
+                    </section>
                     <div class="mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-dark">Login</button>
+                        <a class="btn btn-outline-danger btn-lg" href="/" role="button">Voltar</a>
+                        <button type="submit" class="btn btn-dark btn-lg mx-2">Login</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>

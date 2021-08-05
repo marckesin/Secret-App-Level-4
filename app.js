@@ -4,6 +4,7 @@ const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const helmet = require('helmet');
 
 const indexRouter = require('./routes/index');
 const registerRouter = require('./routes/register');
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(helmet());
 
 const dbConfig = require('./config/database.config').local;
 const mongoose = require('mongoose');
