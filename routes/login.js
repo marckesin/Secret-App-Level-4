@@ -5,7 +5,7 @@ const User = require('../models/user.model');
 
 
 router.get('/', (req, res) => {
-  res.render('login');
+  res.render('login', { info: "" });
 });
 
 router.post('/', async (req, res) => {
@@ -16,11 +16,11 @@ router.post('/', async (req, res) => {
         if (!err && result) {
           res.render('secrets', { secret: user.password });
         } else {
-          res.redirect('/login');
+          res.render('login', { info: "Email ou senha inválidos!" });
         }
       });
     } else {
-      res.redirect('/login');
+      res.render('login', { info: "Email ou senha inválidos!" });
     }
   });
 });

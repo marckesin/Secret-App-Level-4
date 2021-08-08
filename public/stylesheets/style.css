@@ -9,6 +9,11 @@ input[type=password]:not(:focus):invalid {
   outline-color: red;
 }
 
+input[type=email]:valid,
+input[type=password]:valid {
+  background-color: #d2f8d2;
+}
+
 .display-5{
   font-size: 1.9rem;
 }
