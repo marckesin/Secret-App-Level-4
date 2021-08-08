@@ -54,9 +54,10 @@ input[type=password]:valid {
 .registrar{
   margin: 7rem 20rem 0;
   padding: 1rem;
+  min-width: 275px;
 }
 
-@media(max-width: 850px) {
+@media(max-width: 950px) {
   .registrar{
     margin: 7rem 8rem 0;
     padding: 1rem;
@@ -64,7 +65,7 @@ input[type=password]:valid {
 }
 
 @media(max-width: 576px) {
-  span{
+  .toggle{
     opacity: 0!important;
   }
 
@@ -86,7 +87,7 @@ input[type=password]:valid {
   }
 
   .registrar{
-    margin: 4rem 4rem 0;
+    margin: 4rem 2rem 0;
     padding: 1rem;
   }
 
